@@ -1,0 +1,437 @@
+<!-- //라이브 서버 연결 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 아이콘 꾸며주기, 페이지 연결! -->
+  <link rel="icon" href="https://st.kakaocdn.net/shoppingstore/static/common/store/shopping_16x16.ico">
+  <link rel="stylesheet" href="./kakao-talk.css">
+  <title>카카오톡 쇼핑하기</title>
+</head>
+<body>
+<!-- 전체를 감싸주는 영역 만들어주기! page wrapper 만들기!-->
+<!-- 왜 만드나요? -> 기본 창 사이즈 유지를 위해서 -->
+  <div id = "kakao-shop-wrapper">
+    <!-- 쇼핑하기 - 헤더 고정 영역 만들기! -->
+    <!-- 변하지 않음! 로고랑 바 메뉴 넣는 부분 -->
+    <div id = "kakao-header">
+      <!-- nav bar 만들기! 메뉴바! -->
+      <div id = "nav">
+        <!-- left, right로 요소 영역 분리 -->
+        <div class="left">
+          <!-- 로고 삽입 -->
+          <img src="https://st.kakaocdn.net/commerce_ui/front-talkstore/real/20240906/142428/assets/images/pc/pc_logo_231212.png" alt="쇼핑하기 로고">
+        </div>
+        <div class="right">
+          <!-- 찾기, 배송, 쇼핑, 로그인 -->
+          <div class="icons">
+            <img src="./icons/search.png" alt="검색">
+            <img src="./icons/delivery.png" alt="배송">
+            <img src="./icons/cart.png" alt="장바구니">
+          </div>
+          <div class="sector">|</div>
+          <div class="login">
+            <a href="#">로그인</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 헤더 로고 영역 만들기! 로고, 스토어탭! -->
+    <div id = "kakao-header">
+      <div class="logo-wrapper">
+        <img class="logo-kakao-friends" src="https://st.kakaocdn.net/shoppingstore/store/20240802104502_5833379c29ad4abe88fed8cc227e84c8.jpg" alt="헤더로고">
+        <p>ⓘ 스토어정보</p>
+      </div>
+      <div class="category-wrapper">
+        <div class="category">
+          <ul>
+            <li class="category-menu">홈</li>
+            <li class="category-menu">베스트</li>
+            <li class="category-menu">역시즌 세일</li>
+            <li class="category-menu">베이비춘식이</li>
+            <li class="category-menu">카테고리</li>
+            <li class="category-menu">기획전</li>
+            <li class="category-menu">공지사항</li>
+          </ul>
+        </div>
+        <div class="search-product">
+          <input type="text" placeholder="카카오프렌즈 상품 검색">
+          <img src="./icons/search.png" alt="검색">
+        </div>
+      </div>
+    </div>
+    <!-- 배너 영역 만들기! 휙휙 넘어가는 -->
+      <div id="banner">
+            <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240906102444_048259ddc09c4cc986776eb035dccc8b.jpg" alt="배너">
+      </div>
+      
+      <!-- 새로 나왔어요 영역! -->
+        <div id="content">
+          <div class="new-arrivals-wrapper">
+            <p>NEW 새로 나왔어요</p> 
+            <ul class="new-product-wrapper">
+              <li class="product">
+                <img src="https://st.kakaocdn.net/shoppingstore/product/20240905102458_46a455c9fae94bdcbdfde50c1bdcac23.jpg" alt="다람쥐 바디 필로우_춘식이">
+                <div class="product-title-wrapper">
+                  <p class="product-title">다람쥐 바디 필로우_춘식이</p>
+                  <strong class="price">49,000</strong>
+                  <div class="review-wrapper">
+                    <!-- <img src="./icons/star.png" alt="별점">
+                    <span class="review"></span> -->
+                  </div>
+                  <span class="sold">구매 7</span>
+                  <span class="free-delivery">무료배송</span>
+                </div>
+              </li>
+
+              <li class="product">
+                <img src="https://st.kakaocdn.net/shoppingstore/product/20240905102854_0353671c09554742990e1492d6154d28.jpg" alt="너구리 바디 필로우_라이언">
+                <div class="product-title-wrapper">
+                  <p class="product-title">너구리 바디 필로우_라이언</p>
+                  <strong class="price">49,000원</strong>
+                  <div class="review-wrapper">
+                    <!-- <img src="./icons/star.png" alt="별점">
+                    <span class="review"></span> -->
+                  </div>
+                  <span class="sold">구매 13</span>
+                  <span class="free-delivery">무료배송</span>
+                </div>
+              </li>
+
+              <li class="product">
+                <img src="https://st.kakaocdn.net/shoppingstore/product/20240828180929_0b970a0a41494a3898ddf4ca4415ffb7.jpg" alt="[태그그립] 터치 결제/교통 스마트키링 병에낀춘식이">
+                <div class="product-title-wrapper">
+                  <p class="product-title">[태그그립] 터치 결제/교통 스마트키링 병에낀춘식이</p>
+                  <strong class="price">19,800원</strong>
+                  <div class="review-wrapper">
+                    <!-- <img src="./icons/star.png" alt="별점">
+                    <span class="review"></span> -->
+                  </div>
+                  <span class="sold">구매 10</span>
+                  <!-- <span class="sold">무료배송</span> -->
+                </div>
+              </li>
+
+              <li class="product">
+                <img src="https://st.kakaocdn.net/shoppingstore/product/20240828181158_97448268d73941759760c134ebf1bb45.jpg" alt="[태그그립] 터치 결제/교통 스마트키링 봉투속춘식이">
+                <div class="product-title-wrapper">
+                  <p class="product-title">[태그그립] 터치 결제/교통 스마트키링 봉투속춘식이</p>
+                  <strong class="price">19,800원</strong>
+                  <div class="review-wrapper">
+                    <!-- <img src="./icons/star.png" alt="별점">
+                    <span class="review"></span> -->
+                  </div>
+                  <span class="sold">구매 16</span>
+                  <!-- <span class="sold">무료배송</span> -->
+                </div>
+              </li>
+
+              <li class="product">
+                <img src="https://st.kakaocdn.net/shoppingstore/product/20240828181344_61a7c1ef5c1b4ecd83b99f9a4578366d.jpg" alt="[태그그립] 카카오 춘식이 릴홀더 화이트">
+                <div class="product-title-wrapper">
+                  <p class="product-title">[태그그립] 카카오 춘식이 릴홀더 화이트</p>
+                  <strong class="price">5,500원</strong>
+                  <div class="review-wrapper">
+                    <!-- <img src="./icons/star.png" alt="별점">
+                    <span class="review"></span> -->
+                  </div>
+                  <span class="sold">구매 42</span>
+                  <!-- <span class="sold">무료배송</span> -->
+                </div>
+              </li>
+
+              <li class="product">
+                <img src="https://st.kakaocdn.net/shoppingstore/product/20240828181528_4fd6e0f12a924fbd8d630af2abdd7e19.jpg" alt="[태그그립] 카카오 춘식이 릴홀더 블랙">
+                <div class="product-title-wrapper">
+                  <p class="product-title">[태그그립] 카카오 춘식이 릴홀더 블랙</p>
+                  <strong class="price">5,500원</strong>
+                  <div class="review-wrapper">
+                    <img src="./icons/star.png" alt="별점">
+                    <span class="review">리뷰 1</span>
+                  </div>
+                  <span class="sold">구매 42</span>
+                  <!-- <span class="sold">무료배송</span> -->
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="section"></div>
+
+          <div class="sub-menu-wrapper">
+            <ul>
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240802080838_21b99f2a545b49cb8483d2db939a206a.jpg" alt="리스트 로고">
+                <p>NEW</p>
+              </li>
+              
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240802080914_8503664abbfb477c98fddc5e15e81599.jpg" alt="리스트 로고">
+                <p>춘식이</p>
+              </li>
+              
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240802080936_024908df03c64908a5ccb1dbe40e41a0.jpg" alt="리스트 로고">
+                <p>라이언</p>
+              </li>
+
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240802080955_c398a941fa754cf2ab46a791228cc21a.jpg" alt="리스트 로고">
+                <p>죠르디</p>
+              </li>
+
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240906100803_7e5993157cb04b60ab8d021fe306ed6d.jpg" alt="리스트 로고">
+                <p>세일</p>
+              </li>
+
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240802110715_6501de324e754fa5834c638c3be0fc43.jpg" alt="리스트 로고">
+                <p>키링</p>
+              </li>
+              
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240802110722_eea834e2d2844f1e926fa5c171833033.jpg" alt="리스트 로고">
+                <p>차량용품</p>
+              </li>
+
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240902113828_d8284d053bac41c49fc319d7586a8b7e.jpg" alt="리스트 로고">
+                <p>프로야구단</p>
+              </li>
+
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240902113851_aaa32a32c9624f6893aad744cd27790d.jpg" alt="리스트 로고">
+                <p>옷입히기</p>
+              </li>
+
+              <li class="list">
+                <img src="https://st.kakaocdn.net/shoppingstore/store/home/brand/20240902114038_cc009e04373044dea88e1ae9f9a0595f.jpg" alt="리스트 로고">
+                <p>최고양</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="section"></div>
+
+          <div class="best-wrapper">
+            <p>BEST 제일 잘 나가요</p>
+            <div class="best-product-wrapper">
+              <ul class="best-product">
+                <li>
+                  <div class="best-image">
+                    <img src="https://st.kakaocdn.net/shoppingstore/product/20240215114100_51aa56c4a90d46e3b02a09898e5d34d5.jpg" alt="베스트상품 이미지">
+                  </div>
+                  <div class="best-title-wrapper">
+                    <p class="best-title">털찐춘식이의하루 여성 상하의 파자마_춘식이</p>
+                    <p class="discount-price">
+                      <strong class="discount">33%</strong>
+                      <strong class="discount-price">39,900원</strong>
+                    </p>
+                    <p class="price">
+                      <strong class="original-price">59,900원</strong>
+                    </p>
+                    <div class="review-wrapper">
+                      <img src="./icons/star.png" alt="별">
+                      <span class="review">리뷰 2</span>
+                    </div>
+                    <div class="sold-info">
+                      <span class="sold">구매 150</span>
+                      <span class="free-delivery">무료배송</span>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="best-image">
+                    <img src="https://st.kakaocdn.net/shoppingstore/product/20231205194837_f9aca11894e14311923c01487f2010f3.jpg" alt="베스트상품 이미지">
+                  </div>
+                  <div class="best-title-wrapper">
+                    <p class="best-title">춘식이 빅스노우볼 메이커</p>
+                    <p class="discount-price">
+                      <strong class="discount">75%</strong>
+                      <strong class="discount-price">3,000원</strong>
+                    </p>
+                    <p class="price">
+                      <strong class="original-price">12,000원</strong>
+                    </p>
+                    <div class="review-wrapper">
+                      <img src="./icons/star.png" alt="별">
+                      <span class="100good-review">100% 만족</span>
+                      <div class="sector">|</div>
+                      <span class="review">리뷰 12</span>
+                    </div>
+                    <div class="sold-info">
+                      <span class="sold">구매 670</span>
+                      <!-- <span class="free-delivery">무료배송</span> -->
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="best-image">
+                    <img src="https://st.kakaocdn.net/shoppingstore/product/20231205194657_06d0e0ca4f6a4e519783c7dc59a9df40.jpg" alt="베스트상품 이미지">
+                  </div>
+                  <div class="best-title-wrapper">
+                    <p class="best-title"> 마이크리스마스쿠키 춘식이 무빙인형</p>
+                    <p class="discount-price">
+                      <strong class="discount">74%</strong>
+                      <strong class="discount-price">15,000원</strong>
+                    </p>
+                    <p class="price">
+                      <strong class="original-price">59,900원</strong>
+                    </p>
+                    <div class="review-wrapper">
+                      <img src="./icons/star.png" alt="별">
+                      <span class="review">리뷰 3</span>
+                    </div>
+                    <div class="sold-info">
+                      <span class="sold">구매 279</span>
+                      <!-- <span class="free-delivery">무료배송</span> -->
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="best-image">
+                    <img src="https://st.kakaocdn.net/shoppingstore/product/20231226164809_06e72d129ef64962aac9c5f24043cc32.jpg" alt="베스트상품 이미지">
+                  </div>
+                  <div class="best-title-wrapper">
+                    <p class="best-title">디어마이산타 크리스마스 브릭피규어</p>
+                    <p class="discount-price">
+                      <strong class="discount">28%</strong>
+                      <strong class="discount-price">35,000원</strong>
+                    </p>
+                    <p class="price">
+                      <strong class="original-price">49,000원</strong>
+                    </p>
+                    <div class="review-wrapper">
+                      <img src="./icons/star.png" alt="별">
+                      <span class="100good-review">85% 만족</span>
+                      <div class="sector">|</div>
+                      <span class="review">리뷰 20</span>
+                    </div>
+                    <div class="sold-info">
+                      <span class="sold">구매 108</span>
+                      <span class="free-delivery">무료배송</span>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="best-image">
+                    <img src="https://st.kakaocdn.net/shoppingstore/product/20240412102241_1120342cf8d8477b805988a09c530ebf.jpg" alt="베스트상품 이미지">
+                  </div>
+                  <div class="best-title-wrapper">
+                    <p class="best-title">아프리콧스튜디오X카카오프렌즈 캐스터네츠백</p>
+                    <p class="discount-price">
+                      <strong class="discount">9%</strong>
+                      <strong class="discount-price">75,000원</strong>
+                    </p>
+                    <p class="price">
+                      <strong class="original-price">83,000원</strong>
+                    </p>
+                    <div class="review-wrapper">
+                      <img src="./icons/star.png" alt="별">
+                      <span class="100good-review">85% 만족</span>
+                      <div class="sector">|</div>
+                      <span class="review">리뷰 16</span>
+                    </div>
+                    <div class="sold-info">
+                      <span class="sold">구매 303</span>
+                      <span class="free-delivery">무료배송</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+            <a href="#" class="best-button">
+            <span>베스트 랭킹상품 더보기 ></span>
+            </a> 
+            
+            <div class="section"></div>
+
+          <div class="colab-wrapper">
+            <div class="colab-titles">
+            <strong class="colab-title">일광전구X카카오프렌즈</strong>
+            <p class="colab-subtitle">우리집 무드는 이거 하나로 끝!</p>
+            </div>
+            <div class="colab-info-wrapper">
+              <div class="colab-image">
+              <img src="https://st.kakaocdn.net/shoppingstore/product/20240717100744_a1cde045563d4bad8135c39daa0426b8.jpg" alt="콜라보 이미지">
+              </div>
+              <div class="colab-info">
+                <p class="colab-title">일광전구X카카오프렌즈 춘식이 에디션</p>
+                <strong class="price">259,000원</strong>
+                <div class="review-wrapper">
+                  <img src="./icons/star.png" alt="별">
+                  <span class="100good-review">91% 만족</span>
+                  <div class="sector">|</div>
+                  <span class="review">리뷰 23</span>
+                </div>
+                <div class="sold-info">
+                  <span class="sold">구매 200</span>
+                  <span class="free-delivery">무료배송</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="colab-section"></div>
+    
+          <div class="restock-wrapper">
+            <div class="restock-titles">
+            <strong class="restock-title">재입고 알림 신청해요</strong>
+            </div>
+              <div class="restock-product-wrapper">
+                <div class="restock-product">
+                  <div class="restock-image">
+                  <img src="https://st.kakaocdn.net/thumb/C375x375.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fproduct%2F20231205200524_8994b82ac33d4487839fd80ed5b82a26.jpg" alt="냥냥고양이 목쿠션_춘식이">
+                  </div>
+                  <div class="restock-info">
+                    <p class="restock-title">냥냥고양이 목쿠션_춘식이</p>
+                    <p class="restock-alarm"><strong>170</strong>명 알림 신청중</p>
+                    <div class="button-wrapper">
+                      <div class="button">
+                        <img src="./icons/bell.png" alt="알림">
+                        <a href="#" class="restock-button">
+                        <span>재입고 알림</span>
+                        </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="restock-product">
+                  <div class="restock-image">
+                  <img src="https://st.kakaocdn.net/thumb/C375x375.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fproduct%2F20240101094234_630c2fe14acc49f38db6021a3c2e2f98.jpg" alt="볼 발그레 칫솔살균기_리틀어피치">
+                  </div>
+                  <div class="restock-info">
+                    <p class="restock-title">볼 발그레 칫솔살균기_리틀어피치</p>
+                    <p class="restock-alarm"><strong>108</strong>명 알림 신청중</p>
+                    <div class="button-wrapper">
+                      <div class="button">
+                      <img src="./icons/bell.png" alt="알림">
+                      <a href="#" class="restock-button">
+                      <span>재입고 알림</span>
+                      </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="section"></div> -->
+        </div>
+        <!-- 콘텐트 영역 -->
+
+        <div id="footer"></div>
+    </div>
+  </div>
+<!-- 전체 영역 -->
+</body>
+</html>

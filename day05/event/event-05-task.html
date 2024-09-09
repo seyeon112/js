@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>체크박스 전체동의</title>
+</head>
+<body>
+  <form>
+    <div>
+      <label>전체 동의
+        <input type="checkbox" name="all" class="all">
+      </label>
+    </div>
+
+    <div>
+      <label>서비스 이용약관 동의
+        <input type="checkbox" name="term1" class="term">
+      </label>
+    </div>
+
+    <div>
+      <label>광고 수신 동의
+        <input type="checkbox" name="term2" class="term">
+      </label>
+    </div>
+
+    <div>
+      <label>개인정보 이용약관 동의
+        <input type="checkbox" name="term3" class="term">
+      </label>
+    </div>
+
+  
+  </form>
+
+
+
+  
+</body>
+<script>
+    //전체 동의를 완성하기
+    //실습 시작
+
+    // function all(all) {
+    // const checkboxes = document.querySelectorAll("input[type=checkbox]");
+    // const p = document.querySelector("#result")
+
+    
+    //   checkboxes.forEach((checkbox) => {
+    //     checkbox.checked = selectAll.checked
+    //   })
+          
+    // }
+
+    // function checkAll() {
+    //   if(document.getElementById("all").checked==true){
+    //     for (var i=0;i<3;i++) document.get
+    //   }
+    // }
+
+  NodeList.prototype.map = Array.prototype.map;
+
+  const all = document.querySelector(".all");
+  const terms = document.querySelectorAll(".term");
+
+  all.addEventListener("click", () => {
+    terms.forEach((check) => {
+      check.checked = all.checked;
+    })
+  })
+
+
+
+  terms.forEach((term) => {
+    term.addEventListener("click", () => {
+      all.checked = terms.map((term) => term.checked).filter((checked) => checked).length === 3;
+    })
+  })
+
+//만약 전체동의가 클릭될 시 > 다른 양관들 전부 동의로 체크
+//전체 동의 해제 시 > 다른 약관들 전부 동의 래체
+//다른 약관들이 전부 동의 될 시 > 전체 동의 역시 체크됨. 
+//전체 동의 박스 안에 appenCHild로 하위 객체들을 넣는다. 
+// 전체 동의 박스가 클릭되었을 시, 같이 클릭됨. 
+//if else 문으로 처리. 만약 전체 동의 박스 클릭했니? 그럼 다 체크
+//아니니? 그럼 내버려둬.
+
+</script>
+
+</html>

@@ -306,3 +306,7 @@ input,select{vertical-align:middle}
   width: 54px;
   border-radius: 12px;
 }
+
+.input:focus{
+  outline: none;
+}

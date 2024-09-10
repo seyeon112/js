@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 아이콘 꾸며주기, 페이지 연결! -->
+  <!-- 아이콘 꾸며주기l, 페이지 연결! -->
   <link rel="icon" href="https://st.kakaocdn.net/shoppingstore/static/common/store/shopping_16x16.ico">
-  <link rel="stylesheet" href="./kakao-talk.css">
+  <link rel="stylesheet" href="./kakao.css">
   <title>카카오톡 쇼핑하기</title>
 </head>
 <body>
@@ -56,7 +56,12 @@
           </ul>
         </div>
         <div class="search-product">
-          <input type="text" placeholder="카카오프렌즈 상품 검색">
+          <form>
+            <label>
+              <input type="text" name = "search" placeholder="카카오프렌즈 상품 검색">
+              <p id="search-result"></p>
+            </label>
+          </form>
           <img src="./icons/search.png" alt="검색">
         </div>
       </div>
@@ -242,4 +247,29 @@
   </div>
 <!-- 전체 영역 -->
 </body>
+<script>
+  const search = document.querySelector("input[name=search]");
+  const searchResult = document.querySelector("#search-result");
+  const form = document.querySelector("form")
+
+
+  search.addEventListener("focus", (e) => {
+    let target = e.target.value
+    search.style.border = "solid 1px orange";
+  })
+
+  search.addEventListener("blur", (e) => {
+    let target = e.target;
+    if(!target.value){
+      searchResult.innerText = "검색어를 입력하세요";
+      searchResult.style.color = "red";
+      globalThis.flag[0] = false;
+      target.focus();
+      return;
+    }
+    searchResult.innerText = "";
+  })
+ 
+
+</script>
 </html>

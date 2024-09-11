@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <label><input type="checkbox" value="선택1">선택1</label>
+    <label><input type="checkbox" value="선택2">선택2</label>
+    <label><input type="checkbox" value="선택3">선택3</label>
+  </div>
+  <p id="result"></p>
+  
+</body>
+<script src="./jquery.js"></script>
+<script>
+  // 체크박스 선택 시 해당 내용을 p 태그에 이어붙이기
+  // 선택 해제 시 해당 내용을 제거
+  // append()
+  // remove()
+  // on()
+  // filter()
+  $("input").on("append", () => {
+    $("#result").checkbox(e.target.value)
+  })
+
+  $("input").on("remove", () => {
+    $("#result").checkbox($(".term").match(strong),filter(":checked").length === 1);
+  })
+
+
+
+</script>
+</html>

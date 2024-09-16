@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/day08/script/index.html">
+  <title>JUST 쇼핑몰</title>
+</head>
+<body>
+  <div id="main-wrapper">
+    <!-- 헤더 영역 -->
+    <div id="header-wrapper">
+      <div id="header">
+        <div id="header-nav">
+          <div id="header-nav-left">
+            <img src="/day08/images/logo.png" alt="logo">
+          </div>
+          <div id="header-nav-right">
+            <div class="main-menu-wrapper">
+                    <ul id="main-menu" class="">
+                      <li>
+                          <a href="#">탑</a>
+                          <div class="sub">
+                              <ul>
+                                  <li>블라우스</li>
+                                  <li>티</li>
+                                  <li>셔츠</li>
+                                  <li>니트</li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li>
+                          <a href="#">아우터</a>
+                          <div class="sub">
+                              <ul>
+                                  <li>자켓</li>
+                                  <li>코트</li>
+                                  <li>가디건</li>
+                                  <li>머플러</li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li>
+                          <a href="#">팬츠</a>
+                          <div class="sub">
+                              <ul>
+                                  <li>청바지</li>
+                                  <li>짧은바지</li>
+                                  <li>긴바지</li>
+                                  <li>레깅스</li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li>
+                          <a href="#">악세서리</a>
+                          <div class="sub">
+                              <ul>
+                                  <li>귀고리</li>
+                                  <li>목걸이</li>
+                                  <li>반지</li>
+                                  <li>팔찌</li>
+                              </ul>
+                          </div>
+                      </li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- slide 영역 -->
+     <div id="slide-wrapper">
+      <div class="slide">
+        <ul>
+          <li><img src="/day08/images/slide1.jpg" alt="slide1"></li>
+          <li><img src="/day08/images/slide2.jpg" alt="slide2"></li>
+          <li><img src="/day08/images/slide3.jpg" alt="slide3"></li>
+        </ul>
+      </div>
+     </div>
+     <!-- Contents 영역 -->
+      <div id="contents-wrapper">
+        <div class="contents">
+          <div class="content1">
+            <div class="layer-pop-up"></div>
+            <div class="gallery">
+              <div><img src="/day08/images/gallery1.jpg" alt="gallery1"></div>
+              <div><img src="/day08/images/gallery2.jpg" alt="gallery2"></div>
+              <div><img src="/day08/images/gallery3.jpg" alt="gallery3"></div>
+            </div>
+          </div>
+          <div class="content2">
+            <img src="/day08/images/banner_img.jpg" alt="banner">
+          </div>
+          <div class="content3">
+            <a href="#"><img src="/day08/images/shortcut_img.jpg" alt="shortcut"></a>
+          </div>
+        </div>
+      </div>
+      <!-- footer 영역 -->
+       <div id="footer-wrapper">
+        <div id="footer">
+          <div id="footer-nav">
+            <div id="footer-nav-left">
+              <div id="logo2">
+                <img src="/day08/images/logo2.png" alt="logo2">
+              </div>
+            </div>
+            <div id="footer-nav-center">
+              <div id="copyright">
+                <li>서울특별시 동대문구 장안벚꽃로 279 한국산업인력공단 서울지역본부</li>
+                <li>전화번호: 1644-8000 동대문구 휘경동 전동중학교 건너편.</li>
+              </div>
+            </div>
+            <div id="footer-nav-right">
+              <img src="/day08/images/sns1.png" alt="sns1">
+              <img src="/day08/images/sns2.png" alt="sns2">
+              <img src="/day08/images/sns3.png" alt="sns3">
+            </div>
+          </div>
+        </div>
+       </div>
+  </div>
+</body>
+<script>
+  
+
+let mainMenu = document.querySelectorAll("#gnb > li")
+        let mainMenuElement = document.querySelector("#gnb")
+
+        for (let i = 0; i < mainMenu.length; i++) {
+            mainMenu[i].addEventListener("mouseover",() => {
+                mainMenuElement.classList.add("on")
+            })
+        }
+
+        let headerElement = document.querySelector("#header")
+
+        header.addEventListener("mouseout",(e) =>{
+            if (e.target.id == "gnb" ){
+                gnbElement.classList.remove("on")
+            }
+        })
+
+
+
+  
+
+
+  setInterval(function() {
+    $(`#slide-wrapper>ul`).delay(3000);
+    $(`#slide-wrapper>ul`).animate({marginTop: "-300px"})
+    $(`#slide-wrapper>ul`).delay(3000);
+    $(`#slide-wrapper>ul`).animate({marginTop: "-600px"})
+    $(`#slide-wrapper>ul`).delay(3000);
+    $(`#slide-wrapper>ul`).animate({marginTop: "0px"})
+  });
+
+</script>
+</html>

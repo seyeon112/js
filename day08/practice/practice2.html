@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/day08/practice/practice2.html">
+</head>
+<style>
+  *{
+      margin: 0;
+      padding: 0;
+  }
+  
+  ul,li{
+      list-style: none;
+  }
+  
+  #wrap{
+      width: 100%;
+  }
+  
+  #header{
+      position:fixed;
+      width: 100%;
+      height: 100px;
+      left: 0;
+      top: 0;
+      padding: 0 30px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e1e1e1;
+      display:flex;
+      justify-content: space-between;
+  }
+  
+  #header > #gnb {
+      width: 1200px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  
+  #header > #gnb::before {
+      content: "";
+      width: 100%;
+      position:absolute;
+      top: 180px;
+      left: 0;
+      height: 180px;
+      background: #fff;
+      border-bottom: 1px solid #e1e1e1;
+      box-shadow: 0px 10px 10px 0px rgba(48,49,51,6%);
+      display: block;
+  }
+  
+  #header > #gnb::before {
+      display: none;
+  }
+  
+  #header > #gnb.on::before {
+      display: block;
+  }
+  
+  #header > #gnb > li .snb {
+      position:absolute;
+      top: 100px;
+      display:none;
+  }
+  
+  #header > #gnb.on > li .snb {
+      display: block;
+  }
+  
+  #header > #gnb > li > .snb > ul > li + li {
+      margin-top:20px;
+  }
+  </style>
+
+  <body>
+    <div id="wrap">
+      <div id="header">
+          <!-- 메뉴바 영역 -->
+          <ul id="gnb" class="">
+              <li>
+                  <a href="#">menu1</a>
+                  <div class="snb">
+                      <ul>
+                          <li>menu1-1</li>
+                          <li>menu1-2</li>
+                          <li>menu1-3</li>
+                          <li>menu1-4</li>
+                      </ul>
+                  </div>
+              </li>
+              <li>
+                  <a href="#">menu2</a>
+                  <div class="snb">
+                      <ul>
+                          <li>menu1-1</li>
+                          <li>menu1-2</li>
+                          <li>menu1-3</li>
+                          <li>menu1-4</li>
+                      </ul>
+                  </div>
+              </li>
+              <li>
+                  <a href="#">menu3</a>
+                  <div class="snb">
+                      <ul>
+                          <li>menu1-1</li>
+                          <li>menu1-2</li>
+                          <li>menu1-3</li>
+                          <li>menu1-4</li>
+                      </ul>
+                  </div>
+              </li>
+              <li>
+                  <a href="#">menu4</a>
+                  <div class="snb">
+                      <ul>
+                          <li>menu1-1</li>
+                          <li>menu1-2</li>
+                          <li>menu1-3</li>
+                          <li>menu1-4</li>
+                      </ul>
+                  </div>
+              </li>
+          </ul>
+          
+      </div>
+  </div>
+  
+  </body>
+  <script type="text/javascript">
+          let gnb = document.querySelectorAll("#gnb > li")
+          let gnbElement = document.querySelector("#gnb")
+  
+          for (let i = 0; i < gnb.length; i++) {
+              gnb[i].addEventListener("mouseover",() => {
+                  gnbElement.classList.add("on")
+              })
+          }
+  
+         
+      </script>
+  
+ 
+</html>
